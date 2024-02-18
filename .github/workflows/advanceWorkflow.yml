@@ -1,4 +1,4 @@
-name: first workflow
+name: advance workflow
 
 env:
   WORKFLOW_VAR: "This variable is declared at the workflow level"
@@ -11,7 +11,7 @@ jobs:
     name: this is the first job
     runs-on: ubuntu-latest
     steps:
-      - name: firstJob script
+      - name: advance firstJob script
         id: firstjob
         shell: bash
         run: echo Hello Worls! This is the first job
@@ -27,6 +27,7 @@ jobs:
           echo "The time of the greeting was at: ${{ steps.print-to-log.outputs.time }}"
         
   secondjob:
+    name: advance 2nd job
     env:
       JOB_VAR: "This is a job variable"
     runs-on: ubuntu-latest
