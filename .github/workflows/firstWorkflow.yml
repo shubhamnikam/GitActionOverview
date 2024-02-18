@@ -1,0 +1,21 @@
+name: first job
+
+on:
+  workflow_dispatch
+
+jobs:
+  firstjob:
+    runs-on: self-hosted
+    steps:
+      - name: firstjob
+        shell: cmd
+        run: echo Hello World. This is a first job
+  
+  secondjob:
+    runs-on: ubuntu-latest
+    steps:
+    - name: secondjob script
+      shell: bash
+      run: |
+        echo Hello from secondjob script
+        echo Hello from secondjob multilne
